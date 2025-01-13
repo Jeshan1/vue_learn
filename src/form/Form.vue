@@ -40,21 +40,21 @@ const handleSubmit = (e) => {
 </script>
 
 <template>
-  <form @submit="handleSubmit">
-    <h2>{{ formType === 'login' ? 'Login' : 'Register' }}</h2>
+  <form @submit="handleSubmit" class="">
+    <h2 class="text-red-600 text-2xl py-4">{{ formType === 'login' ? 'Login' : 'Register' }}</h2>
 
     <div>
-      <label for="email">Email:</label>
+      <label for="email" class="text-left">Email:</label>
       <input type="email" id="email" v-model="formData.email" required />
     </div>
 
     <div>
-      <label for="password">Password:</label>
+      <label for="password" class="text-left">Password:</label>
       <input type="password" id="password" v-model="formData.password" required />
     </div>
 
     <div v-if="formType === 'register'">
-      <label for="confirmPassword">Confirm Password:</label>
+      <label for="confirmPassword" class="text-left">Confirm Password:</label>
       <input
         type="password"
         id="confirmPassword"
